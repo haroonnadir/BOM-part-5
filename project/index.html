@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Cut Paste</title>
+    <!-- Add any necessary CSS here -->
+</head>
+<body>
+    <input type="text" id="inputField">
+    <button id="copyButton">Copy</button>
+    <button id="cutButton">Cut</button>
+    <button id="pasteButton">Paste</button>
+    <button type="button"><a href="./on/offline.html">online offline status</a></button>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const copyButton = document.getElementById('copyButton');
+    const cutButton = document.getElementById('cutButton');
+    const pasteButton = document.getElementById('pasteButton');
+    const inputField = document.getElementById('inputField');
+
+    copyButton.addEventListener('click', function() {
+        inputField.select();
+        document.execCommand('copy');
+        alert('Text copied to clipboard!');
+    });
+
+    cutButton.addEventListener('click', function() {
+        inputField.select();
+        document.execCommand('cut');
+        alert('Text cut to clipboard!');
+    });
+
+    pasteButton.addEventListener('click', function() {
+        inputField.focus();
+        document.execCommand('paste');
+        alert('Text pasted from clipboard!');
+    });
+});
+
+    </script>
+</body>
+</html>

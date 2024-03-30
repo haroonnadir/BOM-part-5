@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offsetWidth & offsetHeight</title>
+</head>
+<body>
+    
+    <script>
+// Get the width of an element with id "exampleElement"
+var element = document.getElementById("exampleElement");
+var width = element.offsetWidth;
+
+// Log the width
+console.log("Width of the element: " + width + " pixels");
+
+var elementHeight = element.offsetHeight;
+// Get the height of an element with class "exampleClass"
+var element = document.querySelector(".exampleClass");
+var height = element.offsetHeight;
+
+// Log the height
+console.log("Height of the element: " + height + " pixels");
+
+
+// ................................
+
+var elementWidth = element.clientWidth;
+// Get the width of an element with id "exampleElement"
+var element = document.getElementById("exampleElement");
+var width = element.clientWidth;
+
+// Log the width
+console.log("Width of the element's content area: " + width + " pixels");
+
+
+var elementHeight = element.clientHeight;
+// Get the height of an element with class "exampleClass"
+var element = document.querySelector(".exampleClass");
+var height = element.clientHeight;
+
+// Log the height
+console.log("Height of the element's content area: " + height + " pixels");
+
+
+element.addEventListener('click', function(event) {
+    var mouseX = event.clientX;
+    console.log("Horizontal coordinate of the mouse pointer: " + mouseX + " pixels");
+});
+
+element.addEventListener('click', function(event) {
+    var mouseY = event.clientY;
+    console.log("Vertical coordinate of the mouse pointer: " + mouseY + " pixels");
+});
+
+element.addEventListener('mousemove', function(event) {
+    var mouseX = event.pageX;
+    console.log("Horizontal coordinate of the mouse pointer relative to the page: " + mouseX + " pixels");
+});
+
+
+element.addEventListener('mousemove', function(event) {
+    var mouseY = event.pageY;
+    console.log("Vertical coordinate of the mouse pointer relative to the page: " + mouseY + " pixels");
+});
+
+
+    </script>
+</body>
+</html>

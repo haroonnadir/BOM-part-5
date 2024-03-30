@@ -1,0 +1,33 @@
+<html>
+<body>
+   <div id = "output1">The value of the global num variable is: </div>
+   <div id = "output2">The value of the local num variable is: </div>
+   <div id = "output3">The value of the car object is: </div>
+   <script>
+      var num = 100;
+      const car = {
+         brand: "Honda",
+         model: "city",
+      }
+
+      function test() {
+         let num = 300;
+         document.getElementById("output1").innerHTML += window.num;
+         document.getElementById("output2").innerHTML += num;
+         document.getElementById("output3").innerHTML += car.brand;
+      }
+      test();
+
+      var windowHeight = window.innerHeight;
+      console.log("Window height: " + windowHeight);
+
+var windowWidth = window.innerWidth;
+console.log("Window width: " + windowWidth);
+
+var myWindow = window.open("https://example.com", "_blank", "width=500,height=500");
+// Later, you can close it using:
+myWindow.close();
+
+   </script>
+</body>
+</html>

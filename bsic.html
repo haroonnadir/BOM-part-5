@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Click Example</title>
+    <script>
+        function handleClick(event) {
+            var mouseX = event.clientX;
+            var mouseY = event.clientY;
+            console.log("Mouse clicked at position: X = " + mouseX + ", Y = " + mouseY);
+        }
+
+<body ondblclick="handleDoubleClick(event)">
+<body oncontextmenu="handleContextMenu(event)">
+<body onmousemove="handleMouseMove(event)">
+<body onmouseenter="handleMouseEnter(event)">
+
+<body onmouseleave="handleMouseLeave(event)">
+
+<body onmouseout="handleMouseOut(event)">
+
+<body onmouseover="handleMouseOver(event)">
+
+<body onmousedown="handleMouseDown(event)">
+<body onmouseup="handleMouseUp(event)">
+
+element.addEventListener('mousemove', function(event) {
+var mouseX = event.offsetX;
+console.log("Horizontal coordinate of the mouse pointer relative to the target element: " + mouseX + " pixels");
+});
+
+element.addEventListener('mousemove', function(event) {
+var mouseY = event.offsetY;
+console.log("Vertical coordinate of the mouse pointer relative to the target element: " + mouseY + " pixels");
+});
+
+    </script>
+</head>
+<body onclick="handleClick(event)">
+    <h2>Click anywhere on the page</h2>
+</body>
+</html>

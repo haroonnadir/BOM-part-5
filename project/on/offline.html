@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online/Offline Status</title>
+</head>
+<body>
+  <h1>Online/Offline Status</h1>
+  <p id="status"></p>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  var statusElement = document.getElementById('status');
+
+  function updateStatus() {
+    if (navigator.onLine) {
+      statusElement.textContent = 'You are online!';
+    } else {
+      statusElement.textContent = 'You are offline!';
+    }
+  }
+
+  // Initial status check
+  updateStatus();
+
+  // Event listeners for online and offline events
+  window.addEventListener('online', function(event) {
+    updateStatus();
+  });
+
+  window.addEventListener('offline', function(event) {
+    updateStatus();
+  });
+});
+
+  </script>
+</body>
+</html>
