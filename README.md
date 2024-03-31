@@ -1,1 +1,1 @@
-full bom done
+full bom done .
